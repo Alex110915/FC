@@ -1,0 +1,89 @@
+body{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+
+}
+
+section{
+    padding-left: 20%;
+    padding-right: 15%;
+}
+
+h1{
+   color: darkblue;
+   font-size: 500%;
+
+}
+
+p{ 
+    font-size: 200%;
+    color: rgb(148, 11, 11);
+}
+
+#Frase{
+    color:rgb(38, 71, 73);
+    font-size: 150%;
+    font-weight: bold;
+    width: 500px;
+    border: 1px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button{
+    background: rgb(161, 173, 173);
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 200px;
+    cursor: pointer;
+    transform: skew(21deg);
+    span{
+        display: inline-block;
+        transform: skew(21deg)
+    }
+    &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: black;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+&:hover{
+    color: aliceblue;
+    &::before{
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: black;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+ button:hover{
+    color:rgb(0, 124, 124);
+ }
+ button:hover::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+ }
+ 
